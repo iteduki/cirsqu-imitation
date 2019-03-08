@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    container_name: circle-square-db
+    image: mysql:5.7
+    volumes:
+      - ./db:/var/lib/mysql/data
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      TZ: Asia/Tokyo
+    command: mysqld --explicit_defaults_for_timestamp --ignore-db-dir=data
+  web:
+    container_name: circle-square-web
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/circle-square-imitation
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
