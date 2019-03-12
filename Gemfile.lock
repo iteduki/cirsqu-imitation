@@ -184,6 +184,10 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
+    rubocop-checkstyle_formatter (0.4.0)
+      rubocop (>= 0.35.1)
+    rubocop-rspec (1.32.0)
+      rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
@@ -252,6 +256,8 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails
   rubocop
+  rubocop-checkstyle_formatter
+  rubocop-rspec
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

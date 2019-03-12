@@ -39,11 +39,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
 
   gem 'rubocop', require: false
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
