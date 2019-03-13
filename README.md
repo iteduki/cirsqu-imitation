@@ -1,7 +1,8 @@
 # README
 
 1. イメージをビルドする
-   - `docker build`
+   - `cp docker-compose.yml.example docker-compose.yml`
+   - `docker-compose build`
 2. コンテナを起動する
    - `docker-compose up -d`
 3. データベース作成
