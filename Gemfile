@@ -43,7 +43,6 @@ gem 'active_hash'
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
-  gem 'rspec-rails'
 
   gem 'rubocop', require: false
   gem 'rubocop-checkstyle_formatter', require: false
@@ -55,6 +54,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'annotate'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -65,6 +65,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
