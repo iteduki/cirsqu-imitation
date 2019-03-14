@@ -1,0 +1,6 @@
+- id: 1
+  key: man
+  name: 男性
+- id: 2
+  key: woman
+  name: 女性

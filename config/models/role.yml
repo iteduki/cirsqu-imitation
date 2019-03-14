@@ -1,0 +1,6 @@
+- id: 1
+  key: administrator
+  name: 管理ユーザー
+- id: 2
+  key: general
+  name: 一般ユーザー
