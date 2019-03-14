@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Role < ActiveYaml::Base
+class Gender < ActiveYaml::Base
   include ActiveHash::Associations
   include ActiveHash::Enum
 
