@@ -5,8 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
+      <th>氏名</th>
+      <th>ニックネーム</th>
+      <th>メール</th>
+      <th>誕生日</th>
+      <th>Twitter</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +17,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
+        <td><%= user.display_name %></td>
+        <td><%= user.nickname %></td>
+        <td><%= user.display_email %></td>
+        <td><%= user.display_birthday %></td>
+        <td><%= user.twitter %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

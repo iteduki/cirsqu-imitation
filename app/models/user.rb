@@ -29,4 +29,18 @@
 #
 
 class User < ApplicationRecord
+  def display_email
+    email_publish ? email : ''
+  end
+
+  def display_name
+    name_publish ? "#{family_name} #{given_name}" : ''
+  end
+
+  def display_birthday
+    base = [age_publish ? birthday.year : '']
+    base << birthday.month if date_publish
+    base << birthday.day if date_publish
+    base.join('/')
+  end
 end
