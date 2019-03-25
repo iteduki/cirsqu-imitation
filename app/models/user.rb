@@ -29,6 +29,15 @@
 #
 
 class User < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+
+  belongs_to :role,
+             class_name: Role.name,
+             shortcuts: [:name]
+  belongs_to :gender,
+             class_name: Gender.name,
+             shortcuts: [:name]
+
   def display_email
     email_publish ? email : ''
   end
