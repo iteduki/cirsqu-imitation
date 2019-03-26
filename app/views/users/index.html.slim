@@ -1,0 +1,40 @@
+p#notice
+  = notice
+h1
+  | Users
+table
+  thead
+    tr
+      th
+        = I18n.t('.users.index.name')
+      th
+        = I18n.t('.users.index.nickname')
+      th
+        = I18n.t('.users.index.mail')
+      th
+        = I18n.t('.users.index.birthday')
+      th
+        = I18n.t('.users.index.twitter')
+      th[colspan="3"]
+  tbody
+    - @users.each do |user|
+      tr
+        td
+          = user.display_name
+        td
+          = user.nickname
+        td
+          = user.display_email
+        td
+          = user.display_birthday
+        td
+          = user.twitter
+        td
+          = link_to 'Show', user
+        td
+          = link_to 'Edit', edit_user_path(user)
+        td
+          = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= paginate @users
+= link_to 'New User', new_user_path
