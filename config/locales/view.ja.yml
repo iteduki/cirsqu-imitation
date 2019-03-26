@@ -1,0 +1,8 @@
+ja:
+  users:
+    index:
+      name: 氏名
+      nickname: ニックネーム
+      mail: メール
+      birthday: 誕生日
+      twitter: Twitter

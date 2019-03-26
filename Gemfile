@@ -46,6 +46,9 @@ gem 'kaminari'
 # slim
 gem 'slim-rails'
 
+# I18n
+gem 'rails-i18n'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
