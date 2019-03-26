@@ -43,6 +43,9 @@ gem 'active_hash'
 # ページング
 gem 'kaminari'
 
+# slim
+gem 'slim-rails'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
@@ -50,6 +53,8 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-checkstyle_formatter', require: false
   gem 'rubocop-rspec', require: false
+
+  gem 'html2slim'
 end
 
 group :development do
