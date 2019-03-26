@@ -56,8 +56,6 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-checkstyle_formatter', require: false
   gem 'rubocop-rspec', require: false
-
-  gem 'html2slim'
 end
 
 group :development do
@@ -70,6 +68,8 @@ group :development do
 
   # migrate時にschema情報を付加する https://github.com/ctran/annotate_models
   gem 'annotate'
+
+  gem 'html2slim'
 end
 
 group :test do
