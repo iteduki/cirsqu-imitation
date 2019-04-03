@@ -1,6 +1,7 @@
 ja:
   users:
     index:
+      search: 検索
       name: 氏名
       nickname: ニックネーム
       mail: メール
