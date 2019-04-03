@@ -4,7 +4,7 @@ h1
   | Users
 
 = form_with(model: User.new, url: users_path, method: :get, local: true) do |form|
-  = form.text_field :title
+  = form.text_field :keyword
   = form.submit(I18n.t('.users.index.search'))
 
 table
