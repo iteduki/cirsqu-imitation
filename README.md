@@ -9,3 +9,5 @@
    - `docker-compose exec web rails db:setup`
 4. アクセス
    - [`localhost:3000`](http://localhost:3000)
+5. プロセスにアクセス（binding.pryとかするときに使う）
+   - `docker attach circle-square-web`

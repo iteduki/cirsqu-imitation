@@ -53,6 +53,10 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
 
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
+
   gem 'rubocop', require: false
   gem 'rubocop-checkstyle_formatter', require: false
   gem 'rubocop-rspec', require: false
