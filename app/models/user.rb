@@ -38,6 +38,24 @@ class User < ApplicationRecord
              class_name: Gender.name,
              shortcuts: [:name]
 
+
+  #scope
+  scope :twitter_like, -> (twitter){
+    where('twitter LIKE ?', "%#{twitter}%")
+  }
+  scope :nickname_like, -> (nickname){
+    where('nickname LIKE ?', "%#{nickname}%")
+  }
+  scope :comment_like, -> (comment){
+    where('comment LIKE ?', "%#{comment}%")
+  }
+  scope :keyword_like, -> (keyword){
+    twitter_like(keyword)
+      .or(nickname_like(keyword))
+      .or(comment_like(keyword))
+  }
+
+  #method
   def display_email
     email_publish ? email : ''
   end
